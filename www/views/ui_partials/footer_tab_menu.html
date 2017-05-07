@@ -1,0 +1,18 @@
+<ion-tabs class="tabs-dark tabs-icon-top">
+
+  <ion-tab title="Home" icon-on="ion-ios-home" icon-off="ion-ios-home-outline" ui-sref="main.home" >
+    <!-- Tab 1 content -->
+      <ion-nav-view name="homeContent" ></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Account" icon-on="ion-ios-gear" icon-off="ion-ios-gear-outline" ui-sref="main.account" >
+    <!-- Tab 2 content -->
+      <ion-nav-view name="accountContent" ></ion-nav-view>
+  </ion-tab>
+
+  <ion-tab title="Cart" badge="cartCount" badge-style="badge-calm" icon-on="ion-ios-pint" icon-off="ion-ios-pint-outline" ui-sref="main.cart" >
+    <!-- Tab 3 content -->
+      <ion-nav-view name="cartContent" ></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

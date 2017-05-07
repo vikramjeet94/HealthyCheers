@@ -1,0 +1,48 @@
+ <ion-view>
+    <div class="bar bar-header bar-dark">
+      <h1 class="title">bar-dark</h1>
+    </div>
+    <ion-content class="has-header padding" >
+
+        <!-- Items in the cart -->
+        <ion-list class="list-inset cart-item" ng-repeat="cartItem in cartItems" >
+            <ion-item>
+                <p>
+                    <span>{{ cartItem.name }}</span>
+                    <span style="float:right" >{{ cartItem.cost * cartItem.quantity }}</span>
+                </p>
+                <p>{{ cartItem.category }}</p>
+            </ion-item>
+            <ion-item>
+                <a class="button button-icon icon ion-ios-minus-outline" ></a>
+                <span>{{ cartItem.quantity }}</span>
+                <a class="button button-icon icon ion-ios-plus-outline" ></a>
+                <a class="button button-icon icon ion-trash-a" ></a>
+
+            </ion-item>
+
+        </ion-list>
+
+        <ion-list>
+
+            <ion-item>
+                <span>Subtotal: </span>
+                <span>{{ subtotal }}</span>
+            </ion-item>
+            <ion-item>
+                <span>Tax: </span>
+                <span>{{ tax }}</span>
+            </ion-item>
+            <ion-item>
+                <span>Total: </span>
+                <span>{{ subtotal + tax }}</span>
+            </ion-item>
+
+        </ion-list>
+
+        <button class="button button-block button-assertive" >
+            CHECKOUT
+        </button>
+
+    </ion-content>
+</ion-view>
